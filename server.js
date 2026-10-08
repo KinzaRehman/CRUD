@@ -1,5 +1,17 @@
 //console.log('May node be with you')
+/*
+Create (post) make something
 
+Read(get) get soemthing
+
+Uupdate(put) change something
+
+Delete (delete) remove something
+
+
+
+
+*/
 const express = require('express')
 const app = express() 
 
