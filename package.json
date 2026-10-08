@@ -1,0 +1,21 @@
+{
+  "name": "crud",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/KinzaRehman/CRUD#readme",
+  "bugs": {
+    "url": "https://github.com/KinzaRehman/CRUD/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KinzaRehman/CRUD.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  }
+}
