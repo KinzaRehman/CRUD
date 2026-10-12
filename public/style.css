@@ -1,0 +1,229 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at top, #1c2947, #080c18 70%);
+    color: #f4f4f5;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+h1 {
+    color: #ffe81f;
+    font-size: clamp(1.6rem, 4vw, 2.5rem);
+    text-shadow: 0 0 18px rgba(255, 232, 31, 0.35);
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: #ffe81f;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #aab6ca;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* MAIN LAYOUT */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* TOP THREE CARDS */
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+    margin-bottom: 40px;
+}
+
+.actions-grid > form,
+.actions-grid > .action-card {
+    margin: 0;
+    padding: 30px;
+    background: rgba(24, 33, 54, 0.95);
+    border: 1px solid #34425c;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.actions-grid h2 {
+    min-height: 50px;
+}
+
+.actions-grid p {
+    flex-grow: 1;
+}
+
+/* INPUT FIELDS */
+input {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    border: 1px solid #43516b;
+    border-radius: 8px;
+    background: #0c1426;
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #ffe81f;
+    box-shadow: 0 0 0 3px rgba(255, 232, 31, 0.12);
+}
+
+/* BUTTONS */
+button {
+    padding: 13px 24px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.actions-grid button {
+    width: 100%;
+    margin-top: auto;
+}
+
+/* CREATE BUTTON */
+button[type="submit"] {
+    background: #ffe81f;
+    color: #111827;
+}
+
+button[type="submit"]:hover {
+    box-shadow: 0 0 18px rgba(255, 232, 31, 0.4);
+}
+
+/* UPDATE BUTTON */
+#update-button {
+    background: #3b82f6;
+    color: white;
+}
+
+#update-button:hover {
+    box-shadow: 0 0 18px rgba(59, 130, 246, 0.4);
+}
+
+/* DELETE BUTTON */
+#delete-button {
+    background: #ef4444;
+    color: white;
+}
+
+#delete-button:hover {
+    box-shadow: 0 0 18px rgba(239, 68, 68, 0.4);
+}
+
+/* SAVED QUOTES SECTION */
+.quotes-section {
+    width: 100%;
+    text-align: left;
+}
+
+.quotes-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.quotes-section ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+/* INDIVIDUAL QUOTE CARDS */
+.quotes-section li {
+    background: #172139;
+    padding: 18px 20px;
+    border: 1px solid #34425c;
+    border-left: 4px solid #ffe81f;
+    border-radius: 10px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.quotes-section li strong {
+    color: #ffe81f;
+}
+
+/* STATUS MESSAGE */
+#message {
+    margin: 15px 0 0;
+    padding: 0;
+    color: #fca5a5;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#message:empty {
+    display: none;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .actions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    body {
+        padding: 25px 15px;
+    }
+
+    .actions-grid,
+    .quotes-section ul {
+        grid-template-columns: 1fr;
+    }
+
+    .actions-grid > form,
+    .actions-grid > .action-card {
+        padding: 22px 18px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

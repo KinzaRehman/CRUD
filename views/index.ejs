@@ -1,0 +1,54 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Star Wars Quote App</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+<body>
+    <h1>May Node and Express be with you.</h1>
+
+    <main>
+        <section class="actions-grid">
+            <!-- CREATE -->
+            <form action="/quotes" method="POST">
+                <h2>Add a Quote</h2>
+                <input type="text" placeholder="Name" name="name" />
+                <input type="text" placeholder="Quote" name="quote" />
+                <button type="submit">Submit</button>
+            </form>
+
+            <!-- UPDATE -->
+            <div class="action-card">
+                <h2>Darth Vader Invades</h2>
+                <p>Replace Yoda's first quote with Darth Vader's quote.</p>
+                <button id="update-button">Replace Yoda's Quote</button>
+            </div>
+
+            <!-- DELETE -->
+            <div class="action-card">
+                <h2>Remove Darth Vader!</h2>
+                <p>Delete one Darth Vader quote.</p>
+                <button id="delete-button">Delete Darth Vader's Quote</button>
+                <div id="message"></div>
+            </div>
+        </section>
+
+        <!-- READ -->
+        <section class="quotes-section">
+            <h2>Saved Quotes</h2>
+            <ul>
+                <% quotes.forEach(quote => { %>
+                    <li>
+                        <strong><%= quote.name %></strong>:
+                        <%= quote.quote %>
+                    </li>
+                <% }) %>
+            </ul>
+        </section>
+    </main>
+
+    <script src="/main.js"></script>
+</body>
