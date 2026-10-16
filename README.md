@@ -59,7 +59,6 @@ node server.js
 ```
 
 Open your browser and visit:
-
 http://localhost:3000
 
 ## 📁 Project Structure
