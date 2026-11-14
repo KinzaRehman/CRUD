@@ -1,0 +1,16 @@
+# Free Render deploy for CRUD / Star Wars Quotes - one web service.
+# In Render: New > Web Service > pick KinzaRehman/CRUD,
+# or use this Blueprint. Then set the env var below in Render.
+# You still need a free MongoDB Atlas cluster for mongodblink.
+# Note: the env var name is exactly mongodblink, as used in server.js.
+services:
+  - type: web
+    name: crud-star-wars-quotes
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /
+    envVars:
+      - key: mongodblink
+        sync: false
