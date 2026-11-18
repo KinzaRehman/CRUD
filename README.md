@@ -2,6 +2,10 @@
 
 A full-stack CRUD application built with Node.js, Express, MongoDB, and EJS. Users can create, read, update, and delete quotes through a simple web interface.
 
+🌐 **Live Demo:** https://crud-star-wars-quotes.onrender.com
+
+> Note: hosted on free Render, so the first load can take about 50 seconds while it wakes up.
+
 ## 📸 Preview
 
 ![CRUD App Screenshot](/screenshot.png)
